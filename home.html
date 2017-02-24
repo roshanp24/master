@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smart Child Care</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1><img src="images/title.jpg" style="width: 50px; height: 50px;"> Smart Child Care</h1>
+			<div id="navigation">
+				<a href="home.html"><button type="button" class="btn btn-success">Home</button></a>
+				<a href="signup.html"><button type="button" class="btn btn-success">Sign Up</button></a>
+				<a href="login.html"><button type="button" class="btn btn-success">Login</button></a>
+				<a href="#"><button type="button" class="btn btn-success">Contact Us</button></a>
+				<a href="#"><button type="button" class="btn btn-success">FAQ</button></a>
+				<a href="#"><button type="button" class="btn btn-success">About Us</button></a>
+			</div>
+		</div>
+		<div id="slide">
+			<img class="mySlides" src="images/1.jpg">
+			<img class="mySlides" src="images/2.jpg">
+			<img class="mySlides" src="images/3.jpg">
+			<img class="mySlides" src="images/4.jpg">
+			<img class="mySlides" src="images/img.png">
+
+			
+		</div>
+
+		<div id="leftBar">
+			<h3>hello</h3>
+			
+		</div>
+		<div id="main">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		var myIndex=0;
+		carousel();
+
+		function carousel(){
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for(i=0; i<x.length; i++){
+				x[i].style.display = "none";
+			}
+			myIndex++;
+			if(myIndex > x.length){myIndex = 1}
+				x[myIndex-1].style.display = "block";
+			setTimeout(carousel,2000);
+		}
+	</script>
+</body>
+</html>
