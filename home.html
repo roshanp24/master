@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
@@ -13,32 +13,82 @@
 	<div id="container">
 		<div id="header">
 			<h1><img src="images/title.jpg" style="width: 50px; height: 50px;"> Smart Child Care</h1>
-			<div id="navigation">
-				<a href="home.html"><button type="button" class="btn btn-success">Home</button></a>
-				<a href="signup.html"><button type="button" class="btn btn-success">Sign Up</button></a>
-				<a href="login.html"><button type="button" class="btn btn-success">Login</button></a>
-				<a href="#"><button type="button" class="btn btn-success">Contact Us</button></a>
-				<a href="#"><button type="button" class="btn btn-success">FAQ</button></a>
-				<a href="#"><button type="button" class="btn btn-success">About Us</button></a>
+			<div>
+				
+				  <ul class="nav nav-tabs">
+				    <li id="navButton" class="active"><a data-toggle="tab" href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+				    <li id="navButton"><a data-toggle="tab" href="#SignUp"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
+				    <li id="navButton"><a data-toggle="tab" href="#Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				    <li id="navButton"><a data-toggle="tab" href="#Contact"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
+				    <li id="navButton"><a data-toggle="tab" href="#About"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
+				    <li id="navButton"><a data-toggle="tab" href="#FAQ"><span class="glyphicon glyphicon-question-sign"></span> FAQ</a></li>
+				  </ul>
+			  	
 			</div>
 		</div>
-		<div id="slide">
-			<img class="mySlides" src="images/1.jpg">
-			<img class="mySlides" src="images/2.jpg">
-			<img class="mySlides" src="images/3.jpg">
-			<img class="mySlides" src="images/4.jpg">
-			<img class="mySlides" src="images/img.png">
-
-			
-		</div>
-
-		<div id="leftBar">
-			<h3>hello</h3>
-			
-		</div>
+	<div class="tab-content">
+			<div id="home" class="tab-pane fade in active">
+				<div id="slide">
+					<img class="mySlides" src="images/1.jpg">
+					<img class="mySlides" src="images/2.jpg">
+					<img class="mySlides" src="images/3.jpg">
+					<img class="mySlides" src="images/4.jpg">
+					<img class="mySlides" src="images/img.png">
+				</div>
+				<div id="leftBar">
+					<h3>hello</h3>
+				</div>
 		<div id="main">
 			
 		</div>
+			</div>
+		<div id="Contact" class="tab-pane fade">
+			<h3><span style="color: gray;">Email:</span> smartbabycare@gmail.com</h3>
+			<h3><span style="color: gray;">Phone:</span> +919876543210</h3>
+			<h3><span style="color: gray;">Address:</span> XYZ, Bangalore, Pin 560070</h3>
+		</div>
+		
+		<div id="Login" class="tab-pane fade" style="margin-top: 50px; margin-left: 50px;">
+			<form  action="#" method="POST">
+      			<div class="form-group">
+        			<label for="email">Email:</label>
+        			<input style="width: 97%;" autocomplete="off" type="email" class="form-control" id="email" placeholder="Enter email" required>
+      			</div>
+      			<div class="form-group">
+        			<label for="pwd">Password:</label>
+        			<input style="width: 97%;" autocomplete="off" type="password" class="form-control" id="pwd" placeholder="Enter password" required>
+     			</div>
+      			<div class="checkbox">
+        			<label><input type="checkbox"> Remember me</label>
+      			</div>
+      			<button type="submit" class="btn btn-success">Login</button>
+    		</form>
+    		<br><br><a data-toggle="tab" href="#SignUp">Crate an Account</a>
+    	</div>
+
+
+
+    	<div id="SignUp" class="tab-pane fade" style="margin-top: 50px; margin-left: 50px;">
+	        <form action="#" method="POST">
+	        <div class="form-group">
+	          <label for="name">Name:</label>
+	          <input style="width: 97%;" autocomplete="off" type="text" class="form-control" id="name" placeholder="Enter name" required>
+	        </div>
+	        <div class="form-group">
+	          <label for="email">Email:</label>
+	          <input style="width: 97%;" autocomplete="off" type="email" class="form-control" id="email" placeholder="Enter email" required>
+	        </div>
+	        <div class="form-group">
+	          <label for="pwd">Password:</label>
+	          <input style="width: 97%;" autocomplete="off" type="password" class="form-control" id="pwd" placeholder="Enter password" required>
+	        </div>
+	        <button type="submit" class="btn btn-success">SignUp</button>
+	      </form>
+	      <br><br><a data-toggle="tab" href="#Login">Already Have an Account?</a>
+    	</div>
+
+	</div>
+		
 	</div>
 	<script type="text/javascript">
 		var myIndex=0;
